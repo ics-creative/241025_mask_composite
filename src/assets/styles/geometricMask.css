@@ -1,0 +1,33 @@
+.geometricMaskWrapper {
+  position: relative;
+  width: 640px;
+  height: 480px;
+}
+
+.geometricMaskBg {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+}
+
+.geometricMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  mask-image: radial-gradient(
+      circle at center,
+      #000 0,
+      #000 80px,
+      transparent 80px,
+      transparent 100%
+    ),
+    radial-gradient(circle at center, #000 0, #000 80px, transparent 80px, transparent 100%);
+  mask-position:
+    0 0,
+    80px 80px;
+  mask-size: 160px 160px;
+  mask-composite: exclude;
+}

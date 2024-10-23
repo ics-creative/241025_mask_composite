@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+:root {
+  --color-text: #333;
+  --color-primary: #01a69b;
+  --color-secondary: #dab52c;
+  --color-tertiary: #dc6c4f;
+  --color-bg: #fff;
+  --color-border: #ddd;
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mainContents {
+  max-width: 640px;
+  padding-top: 48px;
+  margin: 0 auto;
+}
+
+.index {
+  li {
+    margin-bottom: 1rem;
+    margin-left: 1em;
+    font-size: 18px;
+  }
+}
+
+.backToIndex {
+  margin-top: 48px;
+  font-size: 18px;
+}
+
+h1 {
+  margin-bottom: 0.8rem;
+  font-size: 28px;
+}
+
+h2 {
+  margin-bottom: 0.8rem;
+  font-size: 22px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button {
+  min-width: 120px;
+  padding: 8px 16px;
+  margin: 32px auto;
+  font-size: 16px;
+  appearance: none;
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--color-text);
+  border-radius: 6px;
+  transition: background-color 0.3s var(--ease-out-quart);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--color-text), #fff 90%);
+  }
+}

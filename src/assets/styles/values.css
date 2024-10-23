@@ -1,0 +1,78 @@
+.valueSection {
+  margin-bottom: 40px;
+}
+
+.valueWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.valueImages {
+  display: flex;
+
+  img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+  }
+}
+
+.maskWrapper {
+  border: 1px solid var(--color-border);
+}
+
+.mask {
+  width: 300px;
+  height: 200px;
+  background-color: var(--color-primary);
+  mask-size: 300px 200px;
+
+  &.add {
+    mask-composite: add;
+  }
+
+  &.subtract {
+    mask-composite: subtract;
+  }
+
+  &.intersect {
+    mask-composite: intersect;
+  }
+
+  &.exclude {
+    mask-composite: exclude;
+  }
+
+  &.single {
+    mask-image: url("/assets/images/mask_single.png");
+  }
+
+  &.multi {
+    mask-image: url("/assets/images/mask1.png"), url("/assets/images/mask2.png");
+  }
+
+  &.triple {
+    mask-image: url("/assets/images/mask_triple1.png"), url("/assets/images/mask_triple2.png"),
+      url("/assets/images/mask_triple3.png");
+  }
+
+  &.addSubtract {
+    mask-composite: add, subtract;
+  }
+
+  &.subtractIntersection {
+    mask-composite: subtract, intersect;
+  }
+
+  &.intersectionExclude {
+    mask-composite: intersect, exclude;
+  }
+
+  &.excludeExclude {
+    mask-composite: exclude, exclude;
+  }
+}

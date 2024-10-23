@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=640, initial-scale=1.0" />
+    <title>mask-compositeの値</title>
+    <link rel="stylesheet" href="/assets/styles/common.css" />
+    <link rel="stylesheet" href="/assets/styles/values.css" />
+  </head>
+  <body>
+    <div class="mainContents">
+      <h1>mask-compositeの値とその挙動</h1>
+      <p>mask-compositeの各値と実際のマスク具合です。右側の円が左側の円より上になります。</p>
+      <section class="valueSection">
+        <h2>add</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_multi.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask add multi"></div>
+          </div>
+        </div>
+      </section>
+      <section class="valueSection">
+        <h2>subtract</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_multi.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask subtract multi"></div>
+          </div>
+        </div>
+      </section>
+      <section class="valueSection">
+        <h2>intersect</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_multi.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask intersect multi"></div>
+          </div>
+        </div>
+      </section>
+      <section class="valueSection">
+        <h2>exclude</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_multi.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask exclude multi"></div>
+          </div>
+        </div>
+      </section>
+      <p>3つのマスクを合成したときと、mask-compositeの組み合わせの違いの様子です。</p>
+      <section class="valueSection">
+        <h2>3つ（add, subtract）</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_triple.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask addSubtract triple"></div>
+          </div>
+        </div>
+      </section>
+      <section class="valueSection">
+        <h2>3つ（subtract, intersection）</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_triple.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask subtractIntersection triple"></div>
+          </div>
+        </div>
+      </section>
+      <section class="valueSection">
+        <h2>3つ（intersection, exclude）</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_triple.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask intersectionExclude triple"></div>
+          </div>
+        </div>
+      </section>
+      <section class="valueSection">
+        <h2>3つ（exclude, exclude）</h2>
+        <div class="valueWrapper">
+          <div class="valueImages">
+            <img src="/assets/images/mask_triple.png" alt="" width="240" height="160" />
+          </div>
+          <div>→</div>
+          <div class="maskWrapper">
+            <div class="mask excludeExclude triple"></div>
+          </div>
+        </div>
+      </section>
+      <p class="backToIndex">
+        <a href="../">目次に戻る</a>
+      </p>
+    </div>
+  </body>
+</html>
