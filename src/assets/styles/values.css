@@ -64,11 +64,11 @@
     mask-composite: add, subtract;
   }
 
-  &.subtractIntersection {
+  &.subtractIntersect {
     mask-composite: subtract, intersect;
   }
 
-  &.intersectionExclude {
+  &.intersectExclude {
     mask-composite: intersect, exclude;
   }
 
