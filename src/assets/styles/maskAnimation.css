@@ -20,16 +20,19 @@
   animation-iteration-count: infinite;
 }
 
+/* 山の画像のマスク */
 .intersectionAnimationImage1 {
   mask-image: url("/assets/images/intersection_mask1.png");
   animation-name: intersection1;
 }
 
+/* 海の画像のマスク */
 .intersectionAnimationImage2 {
   mask-image: url("/assets/images/intersection_mask2.png");
   animation-name: intersection2;
 }
 
+/* 街の画像のマスク */
 .intersectionAnimationImage3 {
   mask-image: url("/assets/images/intersection_mask1.png"),
     url("/assets/images/intersection_mask2.png");
@@ -169,12 +172,14 @@
   mask-repeat: no-repeat;
   mask-position:
     0 0,
-    324px 237px;
+    324px 237px; /* 「O」の穴に合う位置 */
+
   mask-size:
     100% 100%,
-    16px 18px;
+    16px 18px; /* 「O」の穴に合うサイズ */
+
   mask-composite: exclude;
-  transform-origin: 331px 246px;
+  transform-origin: 331px 246px; /* 拡大した時「O」の穴の中心が起点となるような位置 */
 }
 
 .text {

@@ -13,7 +13,7 @@
       <p>マスクをアニメーションできるのがCSSでマスクするメリットです</p>
 
       <section class="animationSection">
-        <h2>交差アニメーション</h2>
+        <h2 id="intersection">交差アニメーション</h2>
         <div class="intersectionAnimation">
           <img
             src="/assets/images/bg.webp"
@@ -39,7 +39,7 @@
         </div>
       </section>
       <section class="animationSection">
-        <h2>トランジションアニメーション</h2>
+        <h2 id="transition">トランジションアニメーション</h2>
         <div class="transitionAnimation">
           <img
             src="/assets/images/bg.webp"
@@ -55,7 +55,7 @@
       </section>
 
       <section class="animationSection">
-        <h2>スクロールと連動したマスクアニメーション</h2>
+        <h2 id="scroll">スクロールと連動したマスクアニメーション</h2>
         <div class="scrollMask">
           <div class="scrollMaskInner">
             <div class="wall">
@@ -100,10 +100,10 @@
       const text = document.querySelector(".text");
 
       // スクロールイベントに応じてスケールを変更
-      scrollArea.addEventListener("scroll", (e) => {
+      scrollArea.addEventListener("scroll", (event) => {
         // スクロール量に応じた拡大率
-        const scaleRatio = 1 + e.target.scrollTop / 11;
-        if (e.target.scrollTop < 0) {
+        const scaleRatio = 1 + event.target.scrollTop / 11;
+        if (event.target.scrollTop < 0) {
           return;
         }
         text.style.scale = `${scaleRatio}`;
