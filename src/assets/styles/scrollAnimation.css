@@ -1,0 +1,69 @@
+.scrollMask {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  overflow: hidden auto;
+  overscroll-behavior-y: none;
+  scrollbar-gutter: stable;
+}
+
+.scrollMaskInner {
+  width: 100%;
+  height: 1600px;
+}
+
+.wall {
+  position: sticky;
+  top: 0;
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+}
+
+.wallMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  mask-image: linear-gradient(#000, #000),
+    radial-gradient(#000 0, #000 50%, transparent 50%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-position:
+    0 0,
+    324px 237px; /* 「O」の穴に合う位置 */
+
+  mask-size:
+    100% 100%,
+    16px 18px; /* 「O」の穴に合うサイズ */
+
+  mask-composite: exclude;
+  transform-origin: 331px 246px; /* 拡大した時「O」の穴の中心が起点となるような位置 */
+}
+
+.text {
+  position: absolute;
+  top: 229px;
+  left: 308px;
+  z-index: 1;
+  font-size: 22px;
+  font-weight: bold;
+  transform-origin: 24.5px 18px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.wallImage {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 640px;
+  height: 480px;
+  aspect-ratio: 4/3;
+  margin-top: -480px;
+  object-fit: cover;
+}

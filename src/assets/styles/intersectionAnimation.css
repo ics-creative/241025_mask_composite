@@ -1,0 +1,71 @@
+.intersectionAnimation {
+  position: relative;
+  height: 480px;
+}
+
+.intersectionAnimationImage {
+  position: absolute;
+  display: block;
+  width: 640px;
+  height: 480px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  mask-repeat: no-repeat;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* 山の画像のマスク */
+.intersectionAnimationImage1 {
+  mask-image: url("/assets/images/intersection_mask1.png");
+  animation-name: intersection1;
+}
+
+/* 海の画像のマスク */
+.intersectionAnimationImage2 {
+  mask-image: url("/assets/images/intersection_mask2.png");
+  animation-name: intersection2;
+}
+
+/* 街の画像のマスク */
+.intersectionAnimationImage3 {
+  mask-image: url("/assets/images/intersection_mask1.png"),
+    url("/assets/images/intersection_mask2.png");
+  mask-composite: intersect;
+  animation-name: intersection3;
+}
+
+@keyframes intersection1 {
+  0% {
+    mask-position: -1280px 0;
+  }
+
+  100% {
+    mask-position: 0 0;
+  }
+}
+
+@keyframes intersection2 {
+  0% {
+    mask-position: right -1280px bottom 0;
+  }
+
+  100% {
+    mask-position: right 0 bottom 0;
+  }
+}
+
+@keyframes intersection3 {
+  0% {
+    mask-position:
+      -1280px 0,
+      right -1280px bottom 0;
+  }
+
+  100% {
+    mask-position:
+      0 0,
+      right 0 bottom 0;
+  }
+}
